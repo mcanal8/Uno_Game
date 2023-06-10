@@ -4,7 +4,6 @@ import util.Colours;
 
 public class Card {
 
-
     private final int value;
     private final Colours colour;
 

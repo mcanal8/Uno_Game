@@ -22,4 +22,8 @@ public class Stack<T> {
         assert stackItem != null;
         return stackItem.getElement();
     }
+
+    public boolean isEmpty(){
+        return stackItem == null;
+    }
 }

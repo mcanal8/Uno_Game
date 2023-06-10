@@ -24,7 +24,7 @@ public class StackTest {
         stack.pop();
         stack.pop();
         Assertions.assertThrows(AssertionError.class, stack::pop);
-
+        Assertions.assertTrue(stack.isEmpty());
 
     }
 }

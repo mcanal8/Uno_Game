@@ -9,11 +9,9 @@ import java.util.ArrayList;
 public class UtilsTest {
 
     @Test
-    public void createCardsTest(){
+    public void shuffleCardsTest(){
 
-        ArrayList<Card> cards = Utils.createCards();
-
-        Assertions.assertEquals(cards.size(), 108);
+        Stack<Card> cards = Utils.shuffleCards();
 
         //Sort Cards
         ArrayList<Card> yellowCards = new ArrayList<>();
@@ -22,7 +20,8 @@ public class UtilsTest {
         ArrayList<Card> redCards = new ArrayList<>();
         ArrayList<Card> blackCards = new ArrayList<>();
 
-        for(Card card : cards){
+        do{
+            Card card = cards.pop().getElement();
             switch (card.getColour()){
                 case YELLOW:
                     yellowCards.add(card);
@@ -39,13 +38,18 @@ public class UtilsTest {
                 case BLACK:
                     blackCards.add(card);
             }
-        }
+        }while (!cards.isEmpty());
         Assertions.assertTrue(checkColourCards(yellowCards));
         Assertions.assertTrue(checkColourCards(blueCards));
         Assertions.assertTrue(checkColourCards(greenCards));
         Assertions.assertTrue(checkColourCards(redCards));
         Assertions.assertTrue(checkSpecialCards(blackCards));
       }
+      @Test
+      public void getIntUserInputTest(){
+
+      }
+
       private boolean checkColourCards(ArrayList<Card> cards) {
           int[] cardCounter = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
           for (Card card : cards) {
