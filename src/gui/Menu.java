@@ -2,6 +2,7 @@ package gui;
 
 import game.Card;
 import game.Player;
+import util.PrintCard;
 import util.Utils;
 
 public class Menu {
@@ -17,7 +18,10 @@ public class Menu {
     public static void playerMenu(Player player, Card playCard){
         System.out.println("*************************");
         System.out.println("    Play Card:          ");
-        System.out.println("Num: " + playCard.getValue() + Utils.getColourCodes(playCard.getColour()));
+        PrintCard.printCard(playCard);
+        System.out.println("*************************");
+        System.out.println("    Your Deck:          ");
+        PrintCard.printCards(player.playerDeck);
     }
 
 

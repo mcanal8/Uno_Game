@@ -54,12 +54,12 @@ public class Utils {
 
     public static String getColourCodes(Colours colour){
         switch (colour){
-            case BLACK: return "\u001B[30m";
-            case YELLOW: return "\u001B[33m";
-            case BLUE: return "\u001B[34m";
-            case RED: return "\u001B[31m";
-            case GREEN: return "\u001B[32m";
-            default: return "";
+            case BLACK: return ApplicationConstants.BLACK;
+            case YELLOW: return ApplicationConstants.YELLOW;
+            case BLUE: return ApplicationConstants.BLUE;
+            case RED: return ApplicationConstants.RED;
+            case GREEN: return ApplicationConstants.GREEN;
+            default: return ApplicationConstants.RESET;
         }
     }
 }
