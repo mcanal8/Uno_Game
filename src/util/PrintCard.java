@@ -11,6 +11,7 @@ public class PrintCard {
     private static final String BOTTOM = "╚═══╝";
     private static final String LEFT_SIDE = "║ ";
     private static final String RIGHT_SIDE = "║";
+    private static final String PADDING = "    ";
 
     public static void printCard(Card card){
         List<Card> cards = new ArrayList<>();
@@ -20,7 +21,7 @@ public class PrintCard {
 
     public static void printCards(List<Card> cards){
         for (Card ignored : cards) {
-            System.out.print(TOP + "    ");
+            System.out.print(TOP + PADDING);
         }
         System.out.print("\n");
         for (Card card : cards) {
@@ -35,11 +36,11 @@ public class PrintCard {
             } else {
                 printedCard += " " + RIGHT_SIDE;
             }
-            System.out.print(printedCard + "    ");
+            System.out.print(printedCard + PADDING);
         }
         System.out.print("\n");
         for(Card ignored : cards){
-            System.out.print(BOTTOM + "    ");
+            System.out.print(BOTTOM + PADDING);
         }
         System.out.print("\n");
     }

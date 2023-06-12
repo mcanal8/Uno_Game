@@ -10,8 +10,8 @@ import java.util.*;
 public class Game {
 
     private int turn;
-    private Stack<Card> drawDeck;
-    private List<Player> players;
+    private final Stack<Card> drawDeck;
+    private final List<Player> players;
     private Card playCard;
 
     public Game(){
@@ -23,7 +23,7 @@ public class Game {
 
     public void startGame(int numPlayers){
         for(int i = 0; i < numPlayers; i++){
-            Player player = new Player();
+            Player player = new Player(i +1);
             List<Card> playerDeck = new ArrayList<>();
             for(int j = 0; j < ApplicationConstants.NUM_INITIAL_CARDS; j++){
                 playerDeck.add(drawDeck.pop().getElement());

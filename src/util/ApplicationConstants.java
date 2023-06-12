@@ -23,7 +23,8 @@ public class ApplicationConstants {
     public static final String YELLOW = "\033[1;33m";  // YELLOW
     public static final String BLUE = "\033[1;34m";    // BLUE
     public static final String BLACK = "\033[1;35m";   // BLACK
-
+    public static final String RED_BACKGROUND = "\033[41m";   // Red Background
+    public static final String BLUE_BACKGROUND = "\033[44m";   // Blue Background
 
 
 }
