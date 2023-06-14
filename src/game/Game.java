@@ -2,6 +2,7 @@ package game;
 
 import gui.Menu;
 import util.ApplicationConstants;
+import util.Colours;
 import util.Stack;
 import util.Utils;
 
@@ -39,5 +40,25 @@ public class Game {
         turn++;
         Player player = playerId.next();
         Menu.playerMenu(player, playCard);
+        Card playerAction = playerAction(player.getPlayerDeck());
+       while (!Rules.checkPlayerAction(playerAction)){
+           System.out.println("Action not permitted");
+       }
+       playCard = playerAction;
+       if (Rules.checkVictory(player))
+           Menu.victoryMenu();
+       turn(playerId);
+    }
+
+    private static Card playerAction(List<Card> playerDeck){
+        int playerChoice = Utils.getPositionOfLetter(Utils.getCharUserInput());
+        int deckSize = playerDeck.size();
+        if(playerChoice <= deckSize)
+            return playerDeck.get(playerChoice);
+        if(playerChoice == deckSize + 1)
+            return new Card(ApplicationConstants.DRAW_1, Colours.BLACK);
+        if(playerChoice == deckSize + 2)
+            return new Card(ApplicationConstants.UNO, Colours.BLACK);
+        return null;
     }
 }

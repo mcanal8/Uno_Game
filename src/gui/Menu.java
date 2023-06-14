@@ -3,11 +3,14 @@ package gui;
 import game.Card;
 import game.Player;
 import util.ApplicationConstants;
+import util.Colours;
 import util.PrintCard;
 import util.Utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Menu {
 
@@ -56,6 +59,9 @@ public class Menu {
         System.out.println(PADDING + "UNO " + HORIZONTAL_ARROW + " " + interactionLetters.get(player.getPlayerDeck().size() + 1));
         System.out.println(BOTTOM);
     }
+    public static void victoryMenu(){
+
+    }
     private static void printInteractionMenu(int deckSize){
         String initialPadding = "  ";
         System.out.print(initialPadding);
@@ -83,6 +89,5 @@ public class Menu {
         currentPlayer += "Player " + playerId + ApplicationConstants.RESET + "  " + PLAYER_ICON;
         System.out.println(currentPlayer);
     }
-
 
 }

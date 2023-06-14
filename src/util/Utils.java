@@ -51,6 +51,10 @@ public class Utils {
         }
         return inputNumber;
     }
+    public static char getCharUserInput(){
+        Scanner input = new Scanner(System.in);
+        return input.next("[a-zA-Z]").charAt(0);
+    }
 
     public static String getColourCodes(Colours colour){
         switch (colour){
@@ -61,5 +65,10 @@ public class Utils {
             case GREEN: return ApplicationConstants.GREEN;
             default: return ApplicationConstants.RESET;
         }
+    }
+
+    public static int getPositionOfLetter(char c){
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return alphabet.indexOf(c);
     }
 }
