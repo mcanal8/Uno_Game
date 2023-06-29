@@ -15,7 +15,7 @@ public class ApplicationConstants {
     public static final int COLOUR_CHANGE = 13;
     public static final int DRAW_4 = 14;
     public static final int DRAW_1 = 15;
-    public static final int UNO = 15;
+    public static final int UNO = 16;
 
     //Console Colours
     public static final String RESET = "\033[0m";  // Text Reset

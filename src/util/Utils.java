@@ -53,7 +53,7 @@ public class Utils {
     }
     public static char getCharUserInput(){
         Scanner input = new Scanner(System.in);
-        return input.next("[a-zA-Z]").charAt(0);
+        return input.next("[a-zA-Z]").toUpperCase().charAt(0);
     }
 
     public static String getColourCodes(Colours colour){

@@ -32,6 +32,23 @@ public class Menu {
         interactionLetters.add("\uD83C\uDD36");
         interactionLetters.add("\uD83C\uDD37");
         interactionLetters.add("\uD83C\uDD38");
+        interactionLetters.add("\uD83C\uDD39");
+        interactionLetters.add("\uD83C\uDD3A");
+        interactionLetters.add("\uD83C\uDD3B");
+        interactionLetters.add("\uD83C\uDD3C");
+        interactionLetters.add("\uD83C\uDD3D");
+        interactionLetters.add("\uD83C\uDD3E");
+        interactionLetters.add("\uD83C\uDD3F");
+        interactionLetters.add("\uD83C\uDD40");
+        interactionLetters.add("\uD83C\uDD41");
+        interactionLetters.add("\uD83C\uDD42");
+        interactionLetters.add("\uD83C\uDD43");
+        interactionLetters.add("\uD83C\uDD44");
+        interactionLetters.add("\uD83C\uDD45");
+        interactionLetters.add("\uD83C\uDD46");
+        interactionLetters.add("\uD83C\uDD47");
+        interactionLetters.add("\uD83C\uDD48");
+        interactionLetters.add("\uD83C\uDD49");
     }
 
 
@@ -61,6 +78,18 @@ public class Menu {
     }
     public static void victoryMenu(){
 
+    }
+    public static void colourChangeMenu(){
+        String smallPadding = "    ";
+        System.out.println(TOP);
+        System.out.print(PADDING);
+        System.out.println("Select Colour:");
+        System.out.print(ApplicationConstants.YELLOW + "YELLOW" + ApplicationConstants.RESET + smallPadding);
+        System.out.print(ApplicationConstants.BLUE + "BLUE" + ApplicationConstants.RESET + smallPadding);
+        System.out.print(ApplicationConstants.GREEN + "GREEN" + ApplicationConstants.RESET + smallPadding);
+        System.out.println(ApplicationConstants.RED + "RED" + ApplicationConstants.RESET);
+        printInteractionMenu(4);
+        System.out.println(BOTTOM);
     }
     private static void printInteractionMenu(int deckSize){
         String initialPadding = "  ";
